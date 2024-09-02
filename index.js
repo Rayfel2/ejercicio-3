@@ -6,37 +6,31 @@ const port = process.env.PORT || 3000;
 // Importa las funciones del módulo math.js
 const { sum, subtract, multiply, divide } = require('./math');
 
-// Define una ruta para sumar dos números
-app.get('/sum/:a/:b', (req, res) => {
-  const a = parseFloat(req.params.a);
-  const b = parseFloat(req.params.b);
-  const result = sum(a, b);
-  res.send(`La suma de ${a} y ${b} es ${result}`);
-});
-
-// Define una ruta para restar dos números
-app.get('/subtract/:a/:b', (req, res) => {
-  const a = parseFloat(req.params.a);
-  const b = parseFloat(req.params.b);
-  const result = subtract(a, b);
-  res.send(`La resta de ${a} y ${b} es ${result}`);
-});
-
-// Define una ruta para multiplicar dos números
-app.get('/multiply/:a/:b', (req, res) => {
-  const a = parseFloat(req.params.a);
-  const b = parseFloat(req.params.b);
-  const result = multiply(a, b);
-  res.send(`La multiplicación de ${a} y ${b} es ${result}`);
-});
-
-// Define una ruta para dividir dos números
-app.get('/divide/:a/:b', (req, res) => {
-  const a = parseFloat(req.params.a);
-  const b = parseFloat(req.params.b);
+// Ruta para realizar operaciones matemáticas
+app.get('/calculate', (req, res) => {
+  const { operation, a, b } = req.query;
+  const numA = parseFloat(a);
+  const numB = parseFloat(b);
+  
   try {
-    const result = divide(a, b);
-    res.send(`La división de ${a} entre ${b} es ${result}`);
+    let result;
+    switch (operation) {
+      case 'sum':
+        result = sum(numA, numB);
+        break;
+      case 'subtract':
+        result = subtract(numA, numB);
+        break;
+      case 'multiply':
+        result = multiply(numA, numB);
+        break;
+      case 'divide':
+        result = divide(numA, numB);
+        break;
+      default:
+        return res.status(400).send('Operación no válida');
+    }
+    res.send(`El resultado de ${operation} entre ${numA} y ${numB} es ${result}`);
   } catch (error) {
     res.status(400).send(error.message);
   }
