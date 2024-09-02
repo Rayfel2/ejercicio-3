@@ -1,4 +1,11 @@
 # Ejercicio 3 - Grupo D
+- Rayfel Ogando #1107535 (Rayfel2)
+- Eladio Tavarez #1108874 (Eventr077)
+- Diego Rodriguez #1105880 (D1egoSebastian)
+- Axel Felix #1106662 (Notengonombredisponible)
+- Andres taveras #1107975 (FandresT101)
+- Angel Soriano #1107555 (LoyaKnight)
+
 ## CI/CD Pipeline
 
 Este proyecto utiliza un pipeline de integración y entrega continua (CI/CD) configurado con GitHub Actions. El pipeline se encarga de automatizar el proceso de construcción, instalación de dependencias y ejecución de pruebas. A continuación se describe cómo funciona:
