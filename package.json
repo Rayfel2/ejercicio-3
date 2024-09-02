@@ -1,0 +1,19 @@
+{
+  "name": "ejercicio-3",
+  "version": "1.0.0",
+  "description": "Los estudiantes trabajarán en un repositorio de GitHub donde se encuentra alojada una aplicación simple. El objetivo es configurar un pipeline de CI/CD utilizando GitHub Actions.",
+  "main": "index.js",
+  "scripts": {
+  "start": "node index.js",
+  "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
