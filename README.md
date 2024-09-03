@@ -8,7 +8,7 @@
 
 ## CI/CD Pipeline
 
-Este proyecto utiliza un pipeline de integración y entrega continua (CI/CD) configurado con GitHub Actions. El pipeline se encarga de automatizar el proceso de construcción, instalación de dependencias y ejecución de pruebas. A continuación se describe cómo funciona:
+Este proyecto utiliza un pipeline de integración y entrega continua (CI/CD) configurado con GitHub Actions. El pipeline se encarga de automatizar el proceso de construcción, instalación de dependencias, ejecución de pruebas y el despliegue fue hecho en versel. A continuación se describe cómo funciona:
 
 ### Activación del Pipeline
 
@@ -41,3 +41,5 @@ Las pruebas automatizadas en `npm test` verifican las siguientes funciones matem
   - Verifica que `divide(10, 0)` lanza un error con el mensaje "No se puede dividir por cero".
 
 Este pipeline asegura que todas las pruebas se ejecuten automáticamente para verificar que el código esté funcionando correctamente antes de ser fusionado o desplegado.
+El despliegue fue hecho en versel, por el siguiente link: https://ejercicio-3-beta.vercel.app/calculate?operation=sum&a=1&b=2
+
