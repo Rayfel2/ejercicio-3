@@ -30,7 +30,7 @@ app.get('/calculate', (req, res) => {
       default:
         return res.status(400).send('Operación no válida');
     }
-    res.send(`El resultado de ${operation} entre ${numA} y ${numB} es ${result}`);
+    res.send(`El resultado de ${operation} de los numeros ${numA} y ${numB} es ${result}`);
   } catch (error) {
     res.status(400).send(error.message);
   }
